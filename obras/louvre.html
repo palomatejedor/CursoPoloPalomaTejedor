@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obras Maestras del Museo del Louvre</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      position: relative;
+      background: #F7EDF0;
+      color: #0f172a;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 0.03em;
+    }
+
+    header p {
+      margin-top: 0.75rem;
+      font-size: clamp(1rem, 3.5vw, 1.3rem);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgba(15, 23, 42, 0.75);
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    .artwork {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+      margin-bottom: 2.5rem;
+      padding: 2.25rem 2rem;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .artwork-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .artwork-title {
+      font-size: clamp(1.6rem, 4vw, 2rem);
+      margin: 0;
+      color: #1f2937;
+      font-weight: 700;
+    }
+
+    .artwork-meta {
+      font-size: 0.95rem;
+      color: #64748b;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .artwork figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .artwork img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .artwork figcaption {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 0.6rem 1rem;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.65) 100%);
+      color: #fff;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      z-index: 3;
+    }
+
+    .artwork p {
+      font-size: 1.05rem;
+      margin: 0;
+      color: #374151;
+    }
+
+    /* Iconos Mona Lisa en el header */
+    .mona-icon {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      top: 46%;
+      transform: translateY(-50%);
+      opacity: 0.9;
+      pointer-events: none;
+      border-radius: 16px;
+      background: none;
+      object-fit: contain;
+      filter: none;
+    }
+    .mona-icon.left { left: 2.5rem; }
+    .mona-icon.right { right: 2.5rem; }
+
+    @media (min-width: 760px) {
+      .artwork {
+        grid-template-columns: 300px 1fr;
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .mona-icon { display: none; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #F7EDF0;
+      color: #0f172a;
+      font-size: 0.9rem;
+    }
+    /* icon reemplazo local para .fi-tr-land-layer-location */
+    .fi-tr-land-layer-location,
+    .fi.fi-tr-land-layer-location {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-right: 0.6rem;
+      vertical-align: middle;
+    }
+    .fi-tr-land-layer-location {
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%230f172a' d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/></svg>");
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Las 10 Obras Maestras del Museo del Louvre</h1>
+    <p>Un recorrido por las piezas más influyentes y admiradas del museo parisino, con detalles sobre su historia, autores y ubicación dentro del recinto.</p>
+    <!-- Iconos decorativos Mona Lisa -->
+    <img src="../img/mona-icon.png" alt="Icono Mona Lisa" class="mona-icon left" aria-hidden="true">
+    <img src="../img/mona-icon.png" alt="Icono Mona Lisa" class="mona-icon right" aria-hidden="true">
+  </header>
+  <main>
+    <article class="artwork" id="gioconda">
+      <figure>
+        <img src="../img/mona-lisa.jpg" alt="La Gioconda" loading="lazy">
+        <figcaption>Sala Denon, planta 1, sala de la Gioconda (sala 711)</figcaption>
+      </figure>
+      <div>
+        <div class="artwork-header">
+          <h2 class="artwork-title">La Gioconda — Leonardo da Vinci</h2>
+          <span class="artwork-meta">Italia, ca. 1503 - 1519</span>
+        </div>
+        <p>La sonrisa enigmática de Lisa Gherardini ha cautivado a generaciones enteras. Más allá de la habilidad técnica de Da Vinci, la pintura es un compendio de experimentación con sfumato y perspectiva atmosférica que definió el retrato renacentista.</p>
+      </div>
+    </article>
+
+    <article class="artwork" id="victoria-samotracia">
+      <figure>
+        <img src="../img/victoria-alada-samotracia.jpg" alt="Victoria de Samotracia" loading="lazy">
+        <figcaption>Sala Denon, escalera Daru</figcaption>
+      </figure>
+      <div>
+        <div class="artwork-header">
+          <h2 class="artwork-title">La Victoria Alada de Samotracia</h2>
+          <span class="artwork-meta">Grecia helenística, ca. 190 a. C.</span>
+        </div>
+        <p>Esculpida en mármol, la representación de Niké captura el instante previo al aterrizaje, con un dinamismo que rompe la rigidez habitual de la escultura antigua. Su presencia domina la escalera Daru, creando una experiencia casi teatral.</p>
+      </div>
+    </article>
+
+    <article class="artwork" id="venus-milo">
+      <figure>
+        <img src="../img/venus-de-milo.jpg" alt="Venus de Milo" loading="lazy">
+        <figcaption>Sala Sully, planta baja, sala de las Cícladas</figcaption>
+      </figure>
+      <div>
+        <div class="artwork-header">
+          <h2 class="artwork-title">Venus de Milo — Alexandros de Antioquía</h2>
+          <span class="artwork-meta">Grecia helenística, ca. 100 a. C.</span>
+        </div>
+        <p>La escultura destaca por la elegancia idealizada de la diosa Afrodita. A pesar de sus brazos perdidos, la Venus de Milo se mantiene como un símbolo de belleza clásica gracias a su postura en contrapposto y el delicado tratamiento del mármol.</p>
+      </div>
+    </article>
+
+    <article class="artwork" id="bodas-cana">
+      <figure>
+        <img src="../img/bodas-de-cana.jpg" alt="Las bodas de Caná" loading="lazy">
+        <figcaption>Sala Denon, planta 1, sala de las Bodas de Caná</figcaption>
+      </figure>
+      <div>
+        <div class="artwork-header">
+          <h2 class="artwork-title">Las Bodas de Caná — Paolo Veronese</h2>
+          <span class="artwork-meta">Italia, 1563</span>
+        </div>
+        <p>El lienzo monumental recrea el milagro del agua convertida en vino entre músicos, nobles y personajes contemporáneos a Veronese. Su magnitud convierte la escena bíblica en un banquete veneciano de gran teatralidad cromática.</p>
+      </div>
+    </article>
+
+    <article class="artwork" id="libertad-pueblo">
+      <figure>
+        <img src="../img/libertad-guiando-al-pueblo.jpg" alt="La libertad guiando al pueblo" loading="lazy">
+        <figcaption>Sala Denon, planta 1, sala Mollien</figcaption>
+      </figure>
+      <div>
+        <div class="artwork-header">
+          <h2 class="artwork-title">La Libertad guiando al pueblo — Eugène Delacroix</h2>
+          <span class="artwork-meta">Francia, 1830</span>
+        </div>
+        <p>Delacroix fusiona alegoría y actualidad con la figura de Marianne liderando a los revolucionarios de julio. Las pinceladas vibrantes y el uso dramático de la luz subrayan la energía revolucionaria del romanticismo francés.</p>
+      </div>
+    </article>
+
+    <article class="artwork" id="codigo-hammurabi">
+      <figure>
+        <img src="../img/codigo-hammurabi.jpg" alt="Código de Hammurabi" loading="lazy">
+        <figcaption>Sala Richelieu, planta baja, sala 227</figcaption>
+      </figure>
+      <div>
+        <div class="artwork-header">
+          <h2 class="artwork-title">Estela del Código de Hammurabi</h2>
+          <span class="artwork-meta">Mesopotamia, ca. 1750 a. C.</span>
+        </div>
+        <p>Uno de los textos legales más antiguos del mundo, grabado en diorita y coronado por la escena de Hammurabi recibiendo la ley del dios Shamash. Su importancia radica en la codificación de normas que influyeron en sistemas jurídicos posteriores.</p>
+      </div>
+    </article>
+
+    <article class="artwork" id="escriba-sentado">
+      <figure>
+        <img src="../img/escriba-sentado.jpg" alt="El escriba sentado" loading="lazy">
+        <figcaption>Sala Sully, planta baja, sala 22</figcaption>
+      </figure>
+      <div>
+        <div class="artwork-header">
+          <h2 class="artwork-title">El Escriba Sentado</h2>
+          <span class="artwork-meta">Egipto, dinastía IV (2620 - 2500 a. C.)</span>
+        </div>
+        <p>La escultura policromada retrata con naturalismo a un escriba anónimo, resaltando la vital importancia de la escritura en el Antiguo Egipto. Sus ojos incrustados de cristal de roca aportan una expresividad singular.</p>
+      </div>
+    </article>
+
+    <article class="artwork" id="juramento-horacios">
+      <figure>
+        <img src="../img/juramento-horacios.jpg" alt="El Juramento de los Horacios" loading="lazy">
+        <figcaption>Sala Denon, planta 1, sala 702</figcaption>
+      </figure>
+      <div>
+        <div class="artwork-header">
+          <h2 class="artwork-title">El Juramento de los Horacios — Jacques-Louis David</h2>
+          <span class="artwork-meta">Francia, 1784</span>
+        </div>
+        <p>Icono del neoclasicismo, el cuadro exalta la virtud cívica a través de la escena en la que los hermanos Horacios juran defender Roma. La composición geométrica y la iluminación precisa refuerzan el mensaje moral.</p>
+      </div>
+    </article>
+
+    <article class="artwork" id="balsa-medusa">
+      <figure>
+        <img src="../img/balsa-medusa.jpg" alt="La balsa de la Medusa" loading="lazy">
+        <figcaption>Sala Denon, planta 1, sala Mollien</figcaption>
+      </figure>
+      <div>
+        <div class="artwork-header">
+          <h2 class="artwork-title">La Balsa de la Medusa — Théodore Géricault</h2>
+          <span class="artwork-meta">Francia, 1819</span>
+        </div>
+        <p>Inspirada en un naufragio reciente, la composición mezcla el dramatismo romántico con una denuncia social. Las diagonales ascendentes conducen la mirada hacia la esperanza de rescate en un mar turbulento.</p>
+      </div>
+    </article>
+
+    <article class="artwork" id="esclavo-moribundo">
+      <figure>
+        <img src="../img/esclavo-moribundo.jpg" alt="El esclavo moribundo" loading="lazy">
+        <figcaption>Sala Denon, planta baja, sala Michelangelo</figcaption>
+      </figure>
+      <div>
+        <div class="artwork-header">
+          <h2 class="artwork-title">El Esclavo Moribundo — Michelangelo Buonarroti</h2>
+          <span class="artwork-meta">Italia, ca. 1513 - 1516</span>
+        </div>
+        <p>Concebido para la tumba de Julio II, el Esclavo Moribundo representa la lucha entre el cuerpo y el espíritu. Las torsiones musculares y la expresión melancólica reflejan la maestría anatómica de Miguel Ángel.</p>
+      </div>
+    </article>
+
+    <article class="artwork" id="capitel-persico">
+      <figure>
+        <img src="../img/capitel-toros-dobles.jpg" alt="Capitel persa de toros dobles" loading="lazy">
+        <figcaption>Sala Richelieu, planta baja, sala 410</figcaption>
+      </figure>
+      <div>
+        <div class="artwork-header">
+          <h2 class="artwork-title">Capitel persa de toros dobles — Imperio aqueménida</h2>
+          <span class="artwork-meta">Persia, siglo V a. C.</span>
+        </div>
+        <p>Procedente del palacio de Darío I en Susa, el capitel combina ingeniería y simbolismo. Los toros sostienen vigas de madera y representan la protección del soberano, ilustrando la magnificencia arquitectónica persa.</p>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <i class="fi fi-tr-land-layer-location" aria-hidden="true"></i> Museo del Louvre · París, Francia
+  </footer>
+</body>
+</html>
