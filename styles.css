@@ -1,0 +1,190 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  position: relative;
+  background: #F7EDF0;
+  color: #0f172a;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.03em;
+}
+
+header p {
+  margin-top: 0.75rem;
+  font-size: clamp(1rem, 3.5vw, 1.3rem);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(15, 23, 42, 0.75);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.artwork {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+  margin-bottom: 2.5rem;
+  padding: 2.25rem 2rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr);
+  opacity: 1;
+  transform: none;
+}
+
+.artwork.animatable {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.artwork.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.artwork-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.artwork-title {
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  margin: 0;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.artwork-meta {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.artwork figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.artwork img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.artwork figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 0.6rem 1rem;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.65) 100%);
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  z-index: 3;
+}
+
+.artwork p {
+  font-size: 1.05rem;
+  margin: 0;
+  color: #374151;
+}
+
+/* Iconos Mona Lisa  */
+.mona-icon {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 46%;
+  transform: translateY(-50%);
+  opacity: 0.9;
+  pointer-events: none;
+  border-radius: 16px;
+  background: none;
+  object-fit: contain;
+  filter: none;
+}
+
+.mona-icon.left {
+  left: 2.5rem;
+}
+
+.mona-icon.right {
+  right: 2.5rem;
+}
+
+@media (min-width: 760px) {
+  .artwork {
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .mona-icon {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artwork.animatable {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #F7EDF0;
+  color: #0f172a;
+  font-size: 0.9rem;
+}
+
+/* icon */
+.fi-tr-land-layer-location,
+.fi.fi-tr-land-layer-location {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+}
+
+.fi-tr-land-layer-location {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%230f172a' d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/></svg>");
+}
