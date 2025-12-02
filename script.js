@@ -1,4 +1,3 @@
-// Efecto de agrandar imagen al hacer clic
 const imagenesZoom = document.querySelectorAll(".zoom");
 
 imagenesZoom.forEach((img) => {
