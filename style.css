@@ -5,13 +5,13 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7f1e5; /* tono crema */
+  background-color: #f7f1e5;
   color: #333;
   line-height: 1.6;
 }
 
 header {
-  background-color: #e5dcc5; /* crema un poco más oscuro */
+  background-color: #e5dcc5;
   padding: 20px 15px;
   text-align: center;
   position: relative;
@@ -61,15 +61,14 @@ main {
   margin-bottom: 20px;
 }
 
-
 .artwork figure {
   margin: 0;
   text-align: center;
 }
 
 .artwork img {
-  width: 40%;         
-  max-width: 260px;    
+  width: 40%;
+  max-width: 260px;
   display: block;
   margin: 0 auto;
   border-radius: 3px;
