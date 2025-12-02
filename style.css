@@ -1,4 +1,3 @@
-/* Estilo general */
 * {
   box-sizing: border-box;
 }
@@ -11,7 +10,6 @@ body {
   line-height: 1.6;
 }
 
-/* Encabezado */
 header {
   background-color: #e5dcc5; /* crema un poco más oscuro */
   padding: 20px 15px;
@@ -34,7 +32,6 @@ header p {
   font-size: 0.95rem;
 }
 
-/* Iconos Mona Lisa */
 .mona-icon {
   width: 40px;
   height: 40px;
@@ -50,14 +47,12 @@ header p {
   right: 20px;
 }
 
-/* Contenido principal */
 main {
   max-width: 900px;
   margin: 20px auto;
   padding: 0 15px;
 }
 
-/* Cada obra */
 .artwork {
   background-color: #fffaf1;
   border: 1px solid #d8cfc0;
@@ -66,15 +61,15 @@ main {
   margin-bottom: 20px;
 }
 
-/* Imagen reducida estilo PDF */
+
 .artwork figure {
   margin: 0;
   text-align: center;
 }
 
 .artwork img {
-  width: 40%;          /* imagen más pequeña */
-  max-width: 260px;    /* límite como en el PDF */
+  width: 40%;         
+  max-width: 260px;    
   display: block;
   margin: 0 auto;
   border-radius: 3px;
@@ -86,7 +81,6 @@ figcaption {
   color: #6a6a6a;
 }
 
-/* Títulos y meta */
 .artwork-title {
   margin: 10px 0 0 0;
   font-size: 1.2rem;
@@ -100,13 +94,11 @@ figcaption {
   text-transform: uppercase;
 }
 
-/* Texto */
 .artwork p {
   margin-top: 8px;
   font-size: 0.95rem;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 15px;
@@ -114,7 +106,6 @@ footer {
   font-size: 0.85rem;
 }
 
-/* Efecto zoom en imágenes */
 .zoom {
   cursor: pointer;
   transition: transform 0.3s ease;
